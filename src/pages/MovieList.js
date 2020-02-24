@@ -32,15 +32,19 @@ export default class extends React.Component {
     const { movieList } = this.state;
     return (
       <div>
-        <h3>영화 리스트 리스트</h3>
+        <h3>영화 리스트</h3>
         <div>영화 리스트가 보여질 화면입니다</div>
 
-        <MovieItem
-          title="기생충"
-          posterUrl=""
-          advanceRate={30.2}
-          advanceRateRank={4}
-        />
+        {movieList
+            ? movieList.map(movie => (
+                <MovieItem
+                title={movie.title}
+                posterUrl={movie.posterUrl}
+                advanceRate={movie.advanceRate}
+                advanceRateRank={movie.advanceRateRank}
+                />
+            ))
+            : null}
       </div>
     );
   }
