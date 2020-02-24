@@ -54,7 +54,7 @@ const MovieItem = ({ title, posterUrl, advanceRate, advanceRateRank }) => {
   return (
     <div>
       <h3>{title}</h3>
-      <div>포스터 url: {posterUrl}</div>
+      <img width="150" src={posterUrl}/>
       <div>예매율: {advanceRate}</div>
       <div>예매율 순위 : {advanceRateRank}</div>
     </div>
