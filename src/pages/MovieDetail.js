@@ -10,7 +10,7 @@ export default class extends React.Component {
     //TODO: 1. 서버에서 데이터 불러오기
 
     // 데이터를 불러올 API 주소
-    let url = "http://54.180.149.147:8080/api/team/2/movie/5e574381168330138949b572";
+    let url = "http://54.180.149.147:8080/api/team/2/movie/" + this.props.match.params.id;
 
     //데이터를 서버에서 불러와서 movie라는 변수에 저장한다 
   let movieDetail = await superagent
@@ -26,6 +26,7 @@ export default class extends React.Component {
 
   render() {
     const { movieDetail } = this.state;
+
     return (
       <div>
         <h3>영화 상세 페이지</h3>

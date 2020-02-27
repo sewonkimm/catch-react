@@ -42,6 +42,7 @@ export default class extends React.Component {
                 posterUrl={movie.posterUrl}
                 advanceRate={movie.advanceRate}
                 advanceRateRank={movie.advanceRateRank}
+                id = {movie._id}
                 />
             ))
             : null}
@@ -50,11 +51,13 @@ export default class extends React.Component {
   }
 }
 
-const MovieItem = ({ title, posterUrl, advanceRate, advanceRateRank }) => {
+const MovieItem = ({ title, posterUrl, advanceRate, advanceRateRank, id }) => {
+  let url = "/movie/detail/" + id;
+
   return (
     <div>
-      <h3>{title}</h3>
-      <img width="150" src={posterUrl}/>
+      <a href={url}><h3>{title}</h3></a>
+      <a href={url}><img width="150" src={posterUrl}/></a>
       <div>예매율: {advanceRate}</div>
       <div>예매율 순위 : {advanceRateRank}</div>
     </div>
