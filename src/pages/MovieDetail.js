@@ -34,7 +34,6 @@ export default class extends React.Component {
     return (
         <div>
           <h3>영화 상세 페이지</h3>
-          <div>상세한 영화에 대한 정보가 노출될 페이지입니다</div>
           {/* TODO: 3. 영화 1개에 대한 데이터 출력하는 코드 짜기 */
             movieDetail ?
               <MovieItem

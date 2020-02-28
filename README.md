@@ -50,3 +50,7 @@ initial commit 이후에는 `git add, git commit, git push` 3개의 명령어로
 **🌱superagent**
 > [superagent github](https://github.com/visionmedia/superagent)
 API 호출을 위한 라이브러리
+
+
+## 🍊3회차 실습 내용
+> [실습 내용](https://www.notion.so/3-2235d1aa51cb400d8da03072d7555094)

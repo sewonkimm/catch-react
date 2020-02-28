@@ -24,28 +24,28 @@ export default class extends React.Component {
   });
     
   //TODO : console을 찍어서 확인해봅시다 
-  console.log(movieList);
+  //console.log(movieList);
   };
     
 
   render() {
     const { movieList } = this.state;
     return (
-      <div>
+      <div className="movie_list_screen">
         <h3>영화 리스트</h3>
-        <div>영화 리스트가 보여질 화면입니다</div>
-
-        {movieList
-            ? movieList.map(movie => (
-                <MovieItem
-                title={movie.title}
-                posterUrl={movie.posterUrl}
-                advanceRate={movie.advanceRate}
-                advanceRateRank={movie.advanceRateRank}
-                id = {movie._id}
-                />
-            ))
-            : null}
+        <div className="movie_list">
+          {movieList
+              ? movieList.map(movie => (
+                  <MovieItem
+                  title={movie.title}
+                  posterUrl={movie.posterUrl}
+                  advanceRate={movie.advanceRate}
+                  advanceRateRank={movie.advanceRateRank}
+                  id = {movie._id}
+                  />
+              ))
+              : null}
+          </div>
       </div>
     );
   }
@@ -55,11 +55,11 @@ const MovieItem = ({ title, posterUrl, advanceRate, advanceRateRank, id }) => {
   let url = "/movie/detail/" + id;
 
   return (
-    <div>
-      <a href={url}><h3>{title}</h3></a>
-      <a href={url}><img width="150" src={posterUrl}/></a>
-      <div>예매율: {advanceRate}</div>
-      <div>예매율 순위 : {advanceRateRank}</div>
+    <div className="movie_item">
+      <a href={url}><h3 className="movie_title">{title}</h3></a>
+      <a href={url}><img className="movie_poster" src={posterUrl}/></a>
+      <div className="movie_advance_rate">예매율: {advanceRate}</div>
+      <div className="movie_advance_rate_rank">예매율 순위 : {advanceRateRank}</div>
     </div>
   );
 };
