@@ -1,11 +1,11 @@
 # 현직자와 함께하는 프로그래밍
 
-> 1회차 : https://www.catch.co.kr/CatchCafe/ProgramView/346
+> 1회차 : https://www.catch.co.kr/CatchCafe/ProgramView/346  
 > 2회차 FrontEnd 개발 실습 : https://www.catch.co.kr/CatchCafe/ProgramView/352
 
 ## 🍎2회차 실습 내용
 
-> [사전과제 내용](https://www.notion.so/2-9f611527f10a4ff493cd568cf89fc204)
+> [사전과제 내용](https://www.notion.so/2-9f611527f10a4ff493cd568cf89fc204)  
 > [실습 내용](https://www.notion.so/2-befab0f864b54410a5fc919602960701)
 
 ### 1. create-react-app으로 프로젝트 만들기
@@ -56,3 +56,9 @@ initial commit 이후에는 `git add, git commit, git push` 3개의 명령어로
 ## 🍊3회차 실습 내용
 
 > [실습 내용](https://www.notion.so/3-2235d1aa51cb400d8da03072d7555094)
+
+### css로 디자인 추가하기
+
+1. css 파일 생성
+2. index.js 에서 css파일 import
+3. html에 className 설정하고 css 적용
