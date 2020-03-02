@@ -79,3 +79,20 @@ a {
   font-weight: bold;
   color: steelblue;
 }
+
+/* 영화 상세 아이템 대한 CSS */
+.movie_detail_screen {
+  padding: 10vh;
+}
+
+.movie_detail_screen > .movie_item {
+  margin: auto;
+  width: 45vw;
+  border: none;
+}
+.movie_detail_screen > .movie_item > .item_left > .movie_title {
+  font-size: 40px;
+}
+.movie_detail_screen > .movie_item > .movie_poster {
+  width: 300px;
+}
