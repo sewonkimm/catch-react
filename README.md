@@ -53,6 +53,8 @@ initial commit 이후에는 `git add, git commit, git push` 3개의 명령어로
 > [superagent github](https://github.com/visionmedia/superagent)
 > API 호출을 위한 라이브러리
 
+---
+
 ## 🍊3회차 실습 내용
 
 > [실습 내용](https://www.notion.so/3-2235d1aa51cb400d8da03072d7555094)
@@ -62,3 +64,17 @@ initial commit 이후에는 `git add, git commit, git push` 3개의 명령어로
 1. css 파일 생성
 2. index.js 에서 css파일 import
 3. html에 className 설정하고 css 적용
+
+---
+
+## 🍋과제 진행
+
+### 첫번째 Home화면 꾸미기
+
+![image](https://user-images.githubusercontent.com/30452963/75772842-0e036a00-5d90-11ea-8e4a-5d8bae7c10b7.png)
+
+1. CSS 수직 중앙 정렬 - 기억해 `flex, align-items, justify-content`
+> [참고 블로그](https://hyunseob.github.io/solved-by-flexbox-kr/demos/vertical-centering/)
+
+2. a태그 클릭한 링크 css 고치기 - css 가상요소 visited 활용하기
+> [css 가상요소란?](https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes)

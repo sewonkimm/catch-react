@@ -4,6 +4,42 @@ html {
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Home에 대한 CSS */
+.home {
+  font-size: 35px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home > a {
+  font-size: 28px;
+}
+.home > a:visited {
+  color: white;
+}
+
+.github{
+  margin-top: 10vh;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.github > img{
+  width: 50px;
+}
+.github > a:visited {
+  color: white;
+}
+
 /* 영화 아이템에 대한 CSS */
 .movie_item {
   line-height: 1.4;
@@ -35,10 +71,6 @@ html {
   color: white;
   padding-bottom: 10px;
   margin-top: 5px;
-}
-
-a {
-  text-decoration: none;
 }
 
 .movie_advance_rate {
