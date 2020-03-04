@@ -1,5 +1,6 @@
 import React from "react";
 import superagent from "superagent";
+import moment from "moment";
 
 export default class extends React.Component {
   state = {
@@ -23,7 +24,7 @@ export default class extends React.Component {
     });
 
     //TODO : console을 찍어서 확인해봅시다
-    //console.log(movieList);
+    console.log(movieList);
   };
 
   render() {
@@ -37,6 +38,11 @@ export default class extends React.Component {
                 <MovieItem
                   title={movie.title}
                   posterUrl={movie.posterUrl}
+                  cast={movie.cast}
+                  director={movie.director}
+                  genres={movie.genres}
+                  runtime={movie.runtime}
+                  released={movie.released}
                   advanceRate={movie.advanceRate}
                   advanceRateRank={movie.advanceRateRank}
                   id={movie._id}
@@ -49,9 +55,12 @@ export default class extends React.Component {
   }
 }
 
-const MovieItem = ({ title, posterUrl, advanceRate, advanceRateRank, id }) => {
+const MovieItem = ({ title, posterUrl, cast, director, genres, runtime, released, advanceRate, advanceRateRank, id }) => {
   let url = "/movie/detail/" + id;
+  let release = moment(released).format("YYYY년 MM월 DD일");
 
+  let genre = genres.map((item, index) => ( (index ? ', ': '') + item ));
+  let casts = cast.map((item, index) => ( (index ? ', ': '') + item ));
   return (
     <div className="movie_item">
       <div className="item_left">
@@ -59,6 +68,24 @@ const MovieItem = ({ title, posterUrl, advanceRate, advanceRateRank, id }) => {
           <h3 className="movie_title">{title}</h3>
         </a>
 
+        <div className="movie_released">{release}개봉</div>
+
+        <div className="movie_genres">
+          <div className="p_left">장르</div>
+          <div className="p_right">{genre}</div>
+        </div>
+        <div className="movie_runtime">
+          <div className="p_left">러닝타임</div>
+          <div className="p_right">{runtime}분</div>
+        </div>
+        <div className="movie_cast">
+          <div className="p_left">배우</div>
+          <div className="p_right">{casts}</div>
+        </div>
+        <div className="movie_director">
+          <div className="p_left">감독</div>
+          <div className="p_right">{director}</div>
+        </div>
         <div className="movie_advance_rate">
           <div className="p_left">예매율</div>
           <div className="p_right">{advanceRate}</div>

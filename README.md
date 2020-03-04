@@ -78,3 +78,19 @@ initial commit 이후에는 `git add, git commit, git push` 3개의 명령어로
 
 2. a태그 클릭한 링크 css 고치기 - css 가상요소 visited 활용하기
 > [css 가상요소란?](https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes)
+
+### Movie List화면 꾸미기
+
+1. 영화 정보 추가      
+제목, 포스터, 예매율, 예매율 순위 외에도 개봉일, 장르, 배우, 감독, 런타임 정보 추가
+
+2. 개봉일 형식 - moment.js
+> [moment.js document](https://momentjs.com/docs/)
+
+본래 `2004-11-18T15:00:00.000Z` 이런 형식으로 나오던 정보를 moment.js를 사용해 예쁘게 출력되도록 함
+
+3. 장르, 배우 배열 출력시 콤마(,) 붙이기
+
+`array.map((item, index) => ((index ? ', ': '') + item))`
+
+혹은 css 가상요소 `::before`나 `::after`를 사용하는 방법도 있음
