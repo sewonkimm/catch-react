@@ -34,7 +34,8 @@ a {
   justify-content: center;
 }
 .github > img{
-  width: 50px;
+  width: 30px;
+  margin-right: 10px;
 }
 .github > a:visited {
   color: white;
